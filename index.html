@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TMDB Movie Analytics</title>
+  <style>
+    :root {
+      --ink: #172026;
+      --muted: #5d6a70;
+      --paper: #f5f1e8;
+      --panel: #fffdf8;
+      --accent: #d85b38;
+      --line: #ded6c8;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(circle at 85% 10%, #f6c77d 0, transparent 28%), var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    main { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 72px 0 48px; max-width: 780px; }
+    .eyebrow { color: var(--accent); font: 700 0.78rem/1.2 Arial, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; }
+    h1 { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.9; margin: 18px 0 24px; letter-spacing: -0.04em; }
+    .intro { color: var(--muted); font: 1.15rem/1.6 Arial, sans-serif; max-width: 650px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    a.button { color: var(--panel); background: var(--ink); padding: 13px 18px; text-decoration: none; font: 700 0.9rem Arial, sans-serif; }
+    a.button.secondary { color: var(--ink); background: transparent; border: 1px solid var(--ink); }
+    section { border-top: 1px solid var(--line); padding: 28px 0 64px; }
+    h2 { font-size: 1.8rem; margin: 0 0 22px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    article { background: var(--panel); border: 1px solid var(--line); padding: 22px; min-height: 160px; }
+    article h3 { margin: 0 0 10px; font-size: 1.25rem; }
+    article p { color: var(--muted); font: 0.96rem/1.5 Arial, sans-serif; margin: 0; }
+    article a { color: var(--accent); font-weight: 700; }
+    footer { border-top: 1px solid var(--line); color: var(--muted); font: 0.85rem Arial, sans-serif; padding: 22px 0 42px; }
+    @media (max-width: 700px) {
+      main { width: min(100% - 28px, 1080px); }
+      header { padding-top: 48px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Data project · TMDB</div>
+      <h1>Movie analytics, from raw data to insight.</h1>
+      <p class="intro">An exploratory analytics project using TMDB movie data, Python, SQL, and Power BI to understand films, genres, casts, crews, keywords, ratings, and revenue.</p>
+      <div class="actions">
+        <a class="button" href="https://github.com/Mohamedimran06/TMDB">View source on GitHub</a>
+        <a class="button secondary" href="PowerBI_Dashboard_Setup.md">Dashboard setup</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Explore the project</h2>
+      <div class="grid">
+        <article>
+          <h3>Python notebooks</h3>
+          <p>Cleaning, pandas analysis, SQL analysis, and visualizations are available in the <a href="Notebooks/">notebooks folder</a>.</p>
+        </article>
+        <article>
+          <h3>Movie data</h3>
+          <p>Browse the cleaned movie, genre, cast, crew, keyword, and relationship tables in the <a href="Dataset/">dataset folder</a>.</p>
+        </article>
+        <article>
+          <h3>SQL queries</h3>
+          <p>Review the analysis queries in <a href="powerbi_dashboard_queries.sql">powerbi_dashboard_queries.sql</a> and connect them to the dashboard workflow.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>TMDB Movie Analytics · Built for exploration and reproducible analysis</footer>
+  </main>
+</body>
+</html>
